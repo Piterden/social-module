@@ -20,4 +20,9 @@ class SocialModuleServiceProvider extends AddonServiceProvider
     protected $providers = [
         'Laravel\Socialite\SocialiteServiceProvider',
     ];
+
+    protected $routes = [
+        'social/{provider}/login' => 'Anomaly\SocialModule\Http\Controller\SocialController@login',
+        'social/{provider}/auth'  => 'Anomaly\SocialModule\Http\Controller\SocialController@auth',
+    ];
 }
