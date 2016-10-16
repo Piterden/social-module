@@ -72,7 +72,7 @@ class SocialController extends PublicController
 
             $authenticator->login($user);
 
-            return $this->redirect->to('admin/dashboard');
+            return $this->redirect->intended('admin/dashboard');
         }
 
         if ($extension = $this->extensions->find('anomaly.module.social::provider.' . $provider)) {
