@@ -20,6 +20,9 @@
     "support": {
         "email": "support@pyrocms.com"
     },
+    "require": {
+        "laravel/socialite": "2.0.*"
+    },
     "autoload": {
         "psr-4": {
             "Anomaly\\SocialModule\\": "src/"

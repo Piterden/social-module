@@ -2,35 +2,22 @@
 
 use Anomaly\Streams\Platform\Addon\AddonServiceProvider;
 
+/**
+ * Class SocialModuleServiceProvider
+ *
+ * @link   http://pyrocms.com/
+ * @author PyroCMS, Inc. <support@pyrocms.com>
+ * @author Ryan Thompson <ryan@pyrocms.com>
+ */
 class SocialModuleServiceProvider extends AddonServiceProvider
 {
 
-    protected $plugins = [];
-
-    protected $routes = [];
-
-    protected $middleware = [];
-
-    protected $listeners = [];
-
-    protected $aliases = [];
-
-    protected $bindings = [];
-
-    protected $providers = [];
-
-    protected $singletons = [];
-
-    protected $overrides = [];
-
-    protected $mobile = [];
-
-    public function register()
-    {
-    }
-
-    public function map()
-    {
-    }
-
+    /**
+     * The addon providers.
+     *
+     * @var array
+     */
+    protected $providers = [
+        'Laravel\Socialite\SocialiteServiceProvider',
+    ];
 }
